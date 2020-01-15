@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --light-gray: #EEEEEE;
+    --aqua-blue: #00adb5;
+    --dark-gray: #393e46;
+    --light-black: #222831;
+}
+
+body {
+    background-image: url(../../../public/images/dust2.jpeg);
+    font-family: Menlo, Arial, Helvetica, sans-serif;
+    color: var(--light-gray);
+}
+
+.desktop-nav-bar {
+    display: none;
+}
+              
+.mobile-nav-bar {
+    background-color: var(--dark-gray);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+/* .LOGO WAS AFFECTING MEDIA QUERY. FIXED WIHT INLINE STYLE 
+ .logo {
+    width: 45px;
+}; */
+              
+@media screen and (min-width: 800px){
+    .mobile-nav-bar-container {
+        display: none;
+    }
+
+    .desktop-nav-bar-container {
+        padding-top: 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .desktop-nav-bar {
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+    }
+
+    .desktop-nav-links {
+        margin-left: 50px;
+        color: var(--light-gray);
+        text-decoration: none;
+    }
+}
