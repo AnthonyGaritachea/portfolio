@@ -36,6 +36,48 @@ body {
  .logo {
     width: 45px;
 }; */
+
+        /* HEADER COMPONENT */
+.container {
+    width: 80%;
+    margin: 50px auto 10px auto;
+    text-align: center;
+}
+
+.header-name {
+    margin-top: 20px;
+    font-weight: 100;
+}
+
+/* BODY COMPONENT */
+.body-container {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.project-header {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.content-container {
+    max-width: 770px;
+    margin: 0 auto;
+    background: rgba(57, 62, 70, .5);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.project-name {
+    margin-bottom: 12px;
+    padding: 10px;
+}
+
+.project-details {
+    padding: 10px;
+}
               
 @media screen and (min-width: 800px){
     .mobile-nav-bar-container {
