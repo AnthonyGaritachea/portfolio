@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Body = () => (
-    <div>
     <div className='body-container'>
         <h1 className='project-header'>Projects</h1>
         <div className='content-container'>
@@ -13,14 +12,6 @@ const Body = () => (
             <h1 className='project-name'>Cheryl Lee Website</h1>
             <p className='project-details'>Multi-page responsive website</p>
         </div>
-    </div>
-
-    {/* <div class='body-container'>
-        <div className='content-container'>
-            <h1 className='project-name'>{props.title}</h1>
-            <p className='project-details'>{props.body}</p>
-        </div>
-    </div> */}
     </div>
 );
 
