@@ -25,17 +25,27 @@ body {
 .desktop-nav-bar {
     display: none;
     transition: all .5s;
-    animation: slideInLeft 2s;
+}
+
+.desktop-nav-links {
+    display: inline-block;
+    transition: all .5s;
+    animation: fadeInFromBottom 2s;
+}
+
+.desktop-nav-bar-container li:nth-child(2){
+    animation: fadeInFromBottom 2.5s;
+}
+
+.desktop-nav-bar-container li:nth-child(3){
+    animation: fadeInFromBottom 3s;
 }
 
 .desktop-nav-links:hover {
     color: var(--aqua-blue);
+    transform: scale(1.2);
 }
 
-svg:hover {
-    color: var(--aqua-blue);
-}
-              
 .mobile-nav-bar {
     background-color: var(--dark-gray);
     position: fixed;
@@ -87,6 +97,15 @@ svg:hover {
     transition: all .5s;
 }
 
+/* .content-container {
+    animation: fadeInFromBottom 2.5s;
+}
+
+.content-container:nth-child(3) {
+    animation: fadeInFromBottom 2.5s;
+    animation-timing-function: linear;
+} */
+
 .content-container:hover {
     transform: scale(1.03);
     box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.3);
@@ -105,7 +124,23 @@ svg:hover {
     color: var(--aqua-blue);
     display: inline-block;
     cursor: pointer;
-    padding: 5px;
+    margin: 5px;
+}
+
+.icons {
+    fill: var(--aqua-blue);
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.icons:hover {
+    fill: rgba(0, 172, 181, 0.4)
+
+}
+
+.tech-stack-icons {
+    width: 50px;
 }
 
 .spacer {
@@ -115,6 +150,61 @@ svg:hover {
     visibility: hidden;
 }
 
+.icon-column-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.react-modal {
+    width: 80%;
+    max-width: 650px;
+    background-color: var(--light-black);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 25px;
+    border-radius: 30px;
+    outline: none;
+    transform: translate(-50%, -50%);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+.modal-header {
+    border-bottom: 2px solid var(--aqua-blue);
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.modal-details {
+    text-align: center;
+    padding: 5px;
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 700ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+}
+
+
+
 @media screen and (min-width: 770px){
     .container {
         max-width: 940px;
@@ -123,6 +213,10 @@ svg:hover {
 
     .body-container {
         max-width: 940px;
+    }
+
+    .icon-column-container {
+        display: block;
     }
 
     .project-header {
@@ -165,5 +259,17 @@ svg:hover {
         margin-left: 50px;
         color: var(--light-gray);
         text-decoration: none;
+    }
+}
+
+@keyframes fadeInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
     }
 }

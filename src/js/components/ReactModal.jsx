@@ -1,13 +1,10 @@
 import React from 'react';
 import Modal from 'react-modal';
 
-const customStyles = {
-    content : {
-      top                   : '50%',
-      left                  : '50%',
-      transform             : 'translate(-50%, -50%)'
-    }
-  };
+import { GiExpand } from 'react-icons/gi';
+import { IconContext } from "react-icons";
+
+import momentSvg from '../../../public/images/momentjs.svg';
 
 Modal.setAppElement('#root');
 
@@ -36,12 +33,20 @@ class ReactModal extends React.Component {
     render(){
         return (
             <div>
-                <button onClick={this.openModal}>Open Modal</button>
+                <IconContext.Provider value={{className: "icons" }}><GiExpand onClick={this.openModal}/></IconContext.Provider>
                 <Modal
+                    className='react-modal'
+                    overlayClassName='overlay'
                     isOpen={this.state.modalIsOpen}
                     onRequestClose={this.closeModal}
-                    style={customStyles}
+                    closeTimeoutMS={700}
                 >
+                    <iframe width='400px' height='400px' src={this.props.content}></iframe>
+                    <h1 className='modal-header'>Challenges</h1>
+                    <p className='modal-details'>{this.props.challenges}</p>
+                    <br/>
+                    <h1 className='modal-header'>Outcome</h1>
+                    <p className='modal-details'>{this.props.outcome}</p>
                 </Modal>
             </div>
         )
