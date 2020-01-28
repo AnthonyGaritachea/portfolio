@@ -6,7 +6,7 @@ import { IoLogoGithub } from 'react-icons/io';
 
 import ReactModal from './ReactModal.jsx';
 
-    // TODO: ADD VIDEO FOR WEBSCRAPER PROJECT
+    // TODO: ADD VIDEO FOR WEBSCRAPER PROJECT - publish to youtube
 
 const Body = () =>  (
     <div className='body-container'>
@@ -18,12 +18,26 @@ const Body = () =>  (
              <div className='icon-column-container'>
                 <a className='project-link' href='https://github.com/AnthonyGaritachea/scraper' target='_blank'><IconContext.Provider value={{className: "icons" }}><IoLogoGithub /></IconContext.Provider></a>
                 <ReactModal
-                    content=''
+                    video='https://drive.google.com/file/d/13gYFZbBneAS8vaSVx1WtuPf--vIIHmQQ/preview' 
                     challenges='- First time being exposed to async await and using Regular Expressions to grab specific data'
                     outcome='- Better grasp at async/await and regular expressions'
                 /> 
              </div>
 
+        </div>
+
+        <div className='content-container'>
+            <h1 className='project-name'>Tealium Tool</h1>
+            <p className='project-details'>On Tealium’s e-commerce site we added a Data and Privacy tab on the my account dropdown. Users can manipulate their stats such as delete, download, or see a live feed of their data.</p>
+
+            <div className='icon-column-container'>
+                <a className='project-link' href='https://github.com/Mielan/Healium-Hack' target='_blank'><IconContext.Provider value={{ className: "icons" }}><IoLogoGithub /></IconContext.Provider></a>
+                <ReactModal
+                    challenges='- First time attending hackathon so I doubted what I was capable of creating'
+                    outcome='Learned how other people approach a certain challenge/situation. Ended up taking first place!'
+                    link='https://community.tealiumiq.com/t5/TLC-Blog/Tealium-Hackathon-Game-of-Codes-Winners/ba-p/30224'
+                />
+            </div>
         </div>
 
         <div className='content-container'>

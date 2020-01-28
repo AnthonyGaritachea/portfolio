@@ -31,6 +31,8 @@ class ReactModal extends React.Component {
     };
 
     render(){
+        const video = this.props.video;
+        const link = this.props.link;
         return (
             <div>
                 <IconContext.Provider value={{className: "icons" }}><GiExpand onClick={this.openModal}/></IconContext.Provider>
@@ -41,12 +43,13 @@ class ReactModal extends React.Component {
                     onRequestClose={this.closeModal}
                     closeTimeoutMS={700}
                 >
-                    <iframe width='400px' height='400px' src={this.props.content}></iframe>
+                    {video ? <iframe className='video-peek' src={video} style={{display: 'block'}}></iframe> : ''}
                     <h1 className='modal-header'>Challenges</h1>
                     <p className='modal-details'>{this.props.challenges}</p>
                     <br/>
                     <h1 className='modal-header'>Outcome</h1>
                     <p className='modal-details'>{this.props.outcome}</p>
+                    {link ? <a href={link} className='modal-link'>Read Article</a> : ''}
                 </Modal>
             </div>
         )
