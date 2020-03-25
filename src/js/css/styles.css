@@ -172,6 +172,9 @@ body {
 
 .modal-link {
     color: var(--aqua-blue);
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px;
 }
 
 .modal-link:hover {
