@@ -45,7 +45,7 @@ class ReactModal extends React.Component {
                     closeTimeoutMS={700}
                 >
                     {video && <iframe className='video-peek' src={video} style={{display: 'block'}}></iframe>}
-                    {projectUrl && <a href={projectUrl} className='modal-link'>You can view the project here</a>}
+                    {projectUrl && <a href={projectUrl} className='modal-link' target='_blank'>{this.props.projectInfo ? this.props.projectInfo : 'you can view the project here'}</a>}
                     <h1 className='modal-header'>Challenges</h1>
                     <p className='modal-details'>{this.props.challenges}</p>
                     <br/>
