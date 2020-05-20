@@ -1,6 +1,7 @@
 import React from 'react';
-
 import { gsap } from 'gsap';
+
+import me from '../../../public/images/me.jpeg';
 
 class Header extends React.Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class Header extends React.Component {
     render() {
         return (
             <div className='container'>
-                <img className='portrait' src={require('../../../public/images/me.jpeg')} />
+                <img className='portrait' src={me} />
                 <h1 className='header-name'>Anthony Garitachea</h1>
             </div>
         )
