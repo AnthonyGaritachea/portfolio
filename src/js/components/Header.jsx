@@ -14,10 +14,10 @@ class Header extends React.Component {
 
     render() {
         return (
-            <div className='container'>
-                <img className='portrait' src={me} />
-                <h1 className='header-name'>Anthony Garitachea</h1>
-            </div>
+             <div className='container'>
+                {/* <img className='portrait' src={me} />
+                <h1 className='header-name'>Anthony Garitachea</h1> */}
+             </div>
         )
     }
 };

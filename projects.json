@@ -1,0 +1,14 @@
+[
+    {
+        "projectName": "Restaurant Finde",
+        "projectDetails": "App that aquire's you're geolocation and searches for nearby restauants to help you decide what to eat",
+        "projectSourceCode": "https://github.com/anthonygaritachea/restaurant-finder",
+        "projectLiveSite": "https://guarded-forest-02000.herokuapp.com/"
+    },
+    {
+        "projectName": "Typing Game",
+        "projectDetails": "Web game that keeps count of how many words you type correctly within a certain amount of time",
+        "projectSourceCode": "https://github.com/anthonygaritachea/type",
+        "projectLiveSite": "https://fathomless-hamlet-90107.herokuapp.com/"
+    }  
+]

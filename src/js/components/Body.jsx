@@ -4,6 +4,7 @@ import { IoLogoGithub } from 'react-icons/io';
 import { TweenMax, gsap } from 'gsap';
 
 import ReactModal from './ReactModal.jsx';
+import ProjectCard from './ProjectCard.jsx';
 
 class Body extends React.Component {
     constructor(props){
@@ -90,20 +91,12 @@ class Body extends React.Component {
                     </div>
                 </div>
 
-                <div className='content-container'>
-                    <h1 className='project-name'>Cheryl Lee Website</h1>
-                    <p className='project-details'>Multi-page responsive website. Code school final project</p>
-
-                    <div className='icon-column-container'>
-                        <a title='source code' className='project-link' href='https://github.com/SanDiegoCodeSchool/cheryl-lee' target='_blank'><IconContext.Provider value={{ className: "icons" }}><IoLogoGithub /></IconContext.Provider></a>
-                        <ReactModal
-                                projectUrl='https://docs.google.com/presentation/d/14YEUYdiVPvx3G5lbTDrZWt4tZrrreFcRs4sINZNjhjM/edit?usp=sharing'
-                                projectInfo='You can view the project on slide 11'
-                                challenges='Learning SCRUM Methodology and JIRA'
-                                outcome='One of the first times working in a team environment so having a Scrum master to periodically have standups within the team was very beneficial. We used JIRA for project management so knowing who had specific tickets and if someone was behind we would mob program definetely helped in finishing within our time frame. Although our project was never deployed you can still view the project'
-                            />
-                     </div>
-                </div>
+                <ProjectCard
+                    ProjectName="Restaurant Finder"
+                    ProjectDetails="Worked closely with software development and QA team members to design and develop robust
+                    solutions to meet client requirements for functionality, scalability and performance"
+                    ProjectUrl="http://google.com"
+                />
 
                 <div className='spacer'>
                     <h1>Spacer</h1>
