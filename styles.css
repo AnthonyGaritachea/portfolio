@@ -61,6 +61,11 @@ body {
     font-weight: 100;
 }
 
+.portrait {
+    width: 235px;
+    filter: grayscale(100%)
+}
+
 /* BODY COMPONENT */
 .body-container {
     width: 85%;
@@ -132,6 +137,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 5px
 }
 
 .react-modal {
