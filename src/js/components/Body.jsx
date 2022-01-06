@@ -1,10 +1,9 @@
 import React from 'react';
-import { IconContext } from "react-icons";
-import { IoLogoGithub } from 'react-icons/io';
 import { TweenMax, gsap } from 'gsap';
 
 import ReactModal from './ReactModal.jsx';
 import ProjectCard from './ProjectCard.jsx';
+import projects from '../../../projects.json';
 
 class Body extends React.Component {
     constructor(props){
@@ -26,77 +25,24 @@ class Body extends React.Component {
             })
     }
 
-    // refactor divs to project component
-
     render() {
         return (
             <div className='body-container' >
                 <h1 className='project-header'>Projects</h1>
 
-                <div className='content-container'>
-                    <h1 className='project-name'>Restaurant Finder</h1>
-                    <p className='project-details'>App that aquire's you're geolocation and searches for nearby restauants to help you decide what to eat</p>
-
-                    <div className='icon-column-container'>
-                        <a title='source code' className='project-link' href='https://github.com/anthonygaritachea/restaurant-finder' target='_blank'><IconContext.Provider value={{ className: "icons" }}><IoLogoGithub /></IconContext.Provider></a>
-                        <ReactModal
-                            projectUrl='https://guarded-forest-02000.herokuapp.com/'
-                            challenges="First time deploying webpack app with a production mode. I deployed the app with Redux Dev Tools installed so If  random users try's to access the site without the redux dev tools extension installed the app wont render at all. I was using a 3rd party api and Heroku couldn't acces my environment variables."
-                            outcome="Disabling redux dev tools in production allowed the app to be compatible for all browsers. In order for heroku to use environment variables you need to configure them through the cli or the heroku dashboard."
-                        />
-                     </div>
-                </div>
-
-                <div className='content-container'>
-                    <h1 className='project-name'>Typing Game</h1>
-                    <p className='project-details'>Web game that keeps count of how many words you type correctly within a certain amount of time</p>
-
-                    <div className='icon-column-container'>
-                        <a title='source code' className='project-link' href='https://github.com/anthonygaritachea/type' target='_blank'><IconContext.Provider value={{ className: "icons" }}><IoLogoGithub /></IconContext.Provider></a>
-                        <ReactModal
-                            projectUrl='https://fathomless-hamlet-90107.herokuapp.com/'
-                            challenges='I was exposed to alot of hooks that I was unfamilar with. Passing state between siblings. Exposed to webpack plugins'
-                            outcome='A better grasp on dependency arrays and what their purpose is within hooks. I learned passing data between sibling components you can use the parent as an intermediary and use a callback to pass the data. Learned about webpack plugins and at which stage during the bundle process they execute'
-                        />
-                     </div>
-                </div>
-
-                <div className='content-container'>
-                    <h1 className='project-name'>Web Scraper</h1>
-                    <p className='project-details'>Back end project that controls a headless browser to extract data from Amtrak and stores data into MongoDB</p>
-
-                    <div className='icon-column-container'>
-                        <a title='source code' className='project-link' href='https://github.com/AnthonyGaritachea/scraper' target='_blank'><IconContext.Provider value={{ className: "icons" }}><IoLogoGithub /></IconContext.Provider></a>
-                        <ReactModal
-                            video='https://drive.google.com/file/d/13gYFZbBneAS8vaSVx1WtuPf--vIIHmQQ/preview'
-                            challenges='- First time being exposed to async await and using Regular Expressions to grab specific data'
-                            outcome='- Better grasp at async/await and regular expressions'
-                        />
-                    </div>
-
-                </div>
-
-                <div className='content-container'>
-                    <h1 className='project-name'>Tealium Tool <br></br><span>Hackathon - 1st Place</span></h1>
-                    <p className='project-details'>On Tealium’s e-commerce site we added a Data and Privacy tab on the my account dropdown. Users can manipulate their stats such as delete, download, or see a live feed of their data.</p>
-
-                    <div className='icon-column-container'>
-                        <a title='source code' className='project-link' href='https://github.com/Mielan/Healium-Hack' target='_blank'><IconContext.Provider value={{ className: "icons" }}><IoLogoGithub /></IconContext.Provider></a>
-                        <ReactModal
-                            projectUrl='https://community.tealiumiq.com/t5/TLC-Blog/Tealium-Hackathon-Game-of-Codes-Winners/ba-p/30224'
-                            projectInfo='You can read the Article here'
-                            challenges='- First time attending hackathon so I doubted what I was capable of creating. Working withing a tight timeframe put pressure on me to complete my task'
-                            outcome='Learned how other people approach a certain challenge/situation. Ended up taking first place!'
-                        />
-                    </div>
-                </div>
-
-                <ProjectCard
-                    ProjectName="Restaurant Finder"
-                    ProjectDetails="Worked closely with software development and QA team members to design and develop robust
-                    solutions to meet client requirements for functionality, scalability and performance"
-                    ProjectUrl="http://google.com"
-                />
+                {
+                    projects.map(project => {
+                        return(
+                            <ProjectCard 
+                                key={project.projectName}
+                                ProjectName={project.projectName}
+                                ProjectDetails={project.projectDetails}
+                                ProjectLiveSite={project.projectLiveSite}
+                                ProjectSourceCode={project.projectSourceCode}
+                            />
+                        )
+                    })
+                }
 
                 <div className='spacer'>
                     <h1>Spacer</h1>

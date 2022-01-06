@@ -4,8 +4,6 @@ import Modal from 'react-modal';
 import { GiExpand } from 'react-icons/gi';
 import { IconContext } from "react-icons";
 
-import momentSvg from '../../../public/images/momentjs.svg';
-
 Modal.setAppElement('#root');
 
 class ReactModal extends React.Component {

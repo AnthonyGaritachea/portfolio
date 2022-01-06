@@ -1,9 +1,10 @@
 import React from 'react';
 import { IconContext } from "react-icons";
 import { IoLogoGithub } from 'react-icons/io';
+import { BsWindow } from "react-icons/bs";
 
 const ProjectCard = (props) => {
-    const {ProjectName, ProjectDetails, ProjectUrl} = props; 
+    const {ProjectName, ProjectDetails, ProjectLiveSite, ProjectSourceCode} = props; 
 
     return(
         <div>
@@ -11,7 +12,8 @@ const ProjectCard = (props) => {
                 <h1 className='project-name'>{ProjectName}</h1>
                 <p className='project-details'>{ProjectDetails}</p>
                 <div className='icon-column-container'>
-                    <a title='source code' className='project-link' href={ProjectUrl} target='_blank'><IconContext.Provider value={{ className: "icons" }}><IoLogoGithub /></IconContext.Provider></a>
+                    <a title='live app' href={ProjectLiveSite} className='modal-link' target='_blank'><IconContext.Provider value={{ className: "icons" }}><BsWindow/></IconContext.Provider></a>
+                    <a title='source code' className='project-link' href={ProjectSourceCode} target='_blank'><IconContext.Provider value={{ className: "icons" }}><IoLogoGithub /></IconContext.Provider></a>
                 </div>
             </div>
         </div>
