@@ -1,5 +1,11 @@
 [
     {
+        "projectName": "Task Timer App",
+        "projectDetails": "Full stack productivity web app aimed to help keep track of tasks with time management",
+        "projectSourceCode": "https://github.com/AnthonyGaritachea/task-timer-app",
+        "projectLiveSite": "https://task-timer-app-kappa.vercel.app/login"
+    },
+    {
         "projectName": "Restaurant Finder",
         "projectDetails": "App that aquire's you're geolocation and searches for nearby restauants to help you decide what to eat",
         "projectSourceCode": "https://github.com/anthonygaritachea/restaurant-finder",
