@@ -27,6 +27,9 @@ module.exports = {
             {
                 loader: 'file-loader',
                 test: /\.(svg|jpe?g|png)$/i,
+                options: {
+                    esModule: false,
+                },
             },
             {
                 test: /.css$/i,
