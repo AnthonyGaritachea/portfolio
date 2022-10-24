@@ -86,8 +86,8 @@ body {
     padding: 10px;
     margin-bottom: 20px;
     box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.3);
+    transform-style: preserve-3d
 }
-
 
 .project-name {
     margin-bottom: 12px;
@@ -140,53 +140,47 @@ body {
     padding: 5px
 }
 
+.icon-column-container div {
+    display: none
+}
+
 .react-modal {
-    width: 80%;
-    max-width: 650px;
+    width: 1200px;
+    max-width: 1200px;
     background-color: var(--light-black);
     position: absolute;
     top: 50%;
     left: 50%;
-    padding: 25px;
-    border-radius: 30px;
+    padding: 10px 25px;
+    border-radius: 10px;
     outline: none;
     transform: translate(-50%, -50%);
 }
 
-.overlay {
+.react-modal img {
+    width: 100%; 
+}
+
+.react-modal p {
+    margin: 10px 0px;
+}
+
+ .overlay {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.5)
-}
+} 
 
-.modal-header {
-    border-bottom: 2px solid var(--aqua-blue);
-    display: inline-block;
-    margin-bottom: 5px;
-    padding: 5px;
-}
-
-.modal-details {
-    text-align: center;
-    padding: 5px;
-}
-
-.video-peek {
-    margin: 0 auto;
-    height: 225px;
-    width: 100%;
-    max-width: 500px;
-}
-
-.modal-link {
-    color: var(--aqua-blue);
+.modal-button {
     display: block;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 5px;
+    background: transparent;
+    border: none;
+    position: relative;
+    left: 1166px;
+    padding: 5px 0px;
 }
 
 .modal-link:hover {
@@ -204,7 +198,7 @@ body {
 
 .ReactModal__Overlay--before-close{
     opacity: 0;
-}
+} 
 
 
 
@@ -222,14 +216,9 @@ body {
         display: block;
     }
 
-    .video-peek {
-        height: 340px;
+    .icon-column-container div {
+        display: block 
     }
-
-    .project-header {
-        text-align: left;
-    }
-
     .content-container {
         display: flex;
         align-items: center;
