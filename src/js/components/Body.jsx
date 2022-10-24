@@ -1,7 +1,6 @@
 import React from 'react';
 import { TweenMax, gsap } from 'gsap';
 
-import ReactModal from './ReactModal.jsx';
 import ProjectCard from './ProjectCard.jsx';
 import projects from '../../../projects.json';
 
@@ -39,6 +38,8 @@ class Body extends React.Component {
                                 ProjectDetails={project.projectDetails}
                                 ProjectLiveSite={project.projectLiveSite}
                                 ProjectSourceCode={project.projectSourceCode}
+                                ProjectTechStack={project.projectTechStack}
+                                ProjectImage={project.projectImage}
                             />
                         )
                     })

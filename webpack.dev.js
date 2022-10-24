@@ -16,7 +16,7 @@ module.exports = {
             },
             {
                 loader: 'file-loader',
-                test: /\.(svg|jpeg)$/i,
+                test: /\.(svg|jpeg|png)$/i,
                 options: {
                     esModule: false
                 }

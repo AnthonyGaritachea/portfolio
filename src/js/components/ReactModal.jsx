@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 
 import { GiExpand } from 'react-icons/gi';
 import { IconContext } from "react-icons";
+import { FaRegWindowClose } from 'react-icons/fa'
 
 Modal.setAppElement('#root');
 
@@ -29,9 +30,6 @@ class ReactModal extends React.Component {
     };
 
     render(){
-        const video = this.props.video;
-        const link = this.props.link;
-        const projectUrl = this.props.projectUrl;
         return (
             <div>
                 <IconContext.Provider value={{className: "icons" }}><GiExpand onClick={this.openModal}/></IconContext.Provider>
@@ -42,14 +40,15 @@ class ReactModal extends React.Component {
                     onRequestClose={this.closeModal}
                     closeTimeoutMS={700}
                 >
-                    {video && <iframe className='video-peek' src={video} style={{display: 'block'}}></iframe>}
-                    {projectUrl && <a href={projectUrl} className='modal-link' target='_blank'>{this.props.projectInfo ? this.props.projectInfo : 'View the live app here'}</a>}
-                    <h1 className='modal-header'>Challenges</h1>
-                    <p className='modal-details'>{this.props.challenges}</p>
-                    <br/>
-                    <h1 className='modal-header'>Outcome</h1>
-                    <p className='modal-details'>{this.props.outcome}</p>
-                    {link && <a href={link} className='modal-link'>Read Article</a>}
+                    <div>
+                        <button className='modal-button'>
+                            <IconContext.Provider value={{ className: "icons" }}>
+                                <FaRegWindowClose onClick={this.closeModal} />
+                            </IconContext.Provider>
+                        </button>
+                        {this.props.ProjectImage && <img src={require(`../../../public/images/${this.props.ProjectImage}`)} />}
+                        <p>Tech Stack: {this.props.ProjectTechStack}</p>
+                    </div>  
                 </Modal>
             </div>
         )

@@ -3,24 +3,32 @@
         "projectName": "Task Timer App",
         "projectDetails": "Full stack productivity web app aimed to help keep track of tasks with time management",
         "projectSourceCode": "https://github.com/AnthonyGaritachea/task-timer-app",
-        "projectLiveSite": "https://task-timer-app-kappa.vercel.app/login"
+        "projectLiveSite": "https://task-timer-app-kappa.vercel.app/login",
+        "projectTechStack" : "NextJS, Typescript, Redux Toolkit, Mongoose",
+        "projectImage": "tasktimerdashboard.png"
     },
     {
         "projectName": "Restaurant Finder",
         "projectDetails": "App that aquire's you're geolocation and searches for nearby restauants to help you decide what to eat",
         "projectSourceCode": "https://github.com/anthonygaritachea/restaurant-finder",
-        "projectLiveSite": "https://guarded-forest-02000.herokuapp.com/"
+        "projectLiveSite": "https://guarded-forest-02000.herokuapp.com/",
+        "projectTechStack" : "React, React Router, NodeJS, Express",
+        "projectImage": "restaurantfinder.png"
     },
     {
         "projectName": "Typing Game",
         "projectDetails": "Web game that keeps count of how many words you type correctly within a certain amount of time",
         "projectSourceCode": "https://github.com/anthonygaritachea/type",
-        "projectLiveSite": "https://fathomless-hamlet-90107.herokuapp.com/"
+        "projectLiveSite": "https://fathomless-hamlet-90107.herokuapp.com/",
+        "projectTechStack" : "React, NodeJS, Express",
+        "projectImage": "typinggame.png"
     },
         {
         "projectName": "Tealium Tool Hackathon - 1st Place",
         "projectDetails": "On Tealium’s e-commerce site we added a Data and Privacy tab on the my account dropdown. Users can manipulate their stats such as delete, download, or see a live feed of their data",
         "projectSourceCode": "https://github.com/Mielan/Healium-Hack",
-        "projectLiveSite": "https://community.tealiumiq.com/t5/TLC-Blog/Tealium-Hackathon-Game-of-Codes-Winners/ba-p/30224"
+        "projectLiveSite": "https://community.tealiumiq.com/t5/TLC-Blog/Tealium-Hackathon-Game-of-Codes-Winners/ba-p/30224",
+        "projectTechStack" : "HTML, CSS, Javascript, Tealium Vistor Lookup API",
+        "projectImage": ""
     }    
 ]

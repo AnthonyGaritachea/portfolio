@@ -26,7 +26,7 @@ module.exports = {
             },
             {
                 loader: 'file-loader',
-                test: /\.(svg|jpe?g)$/i,
+                test: /\.(svg|jpe?g|png)$/i,
             },
             {
                 test: /.css$/i,
